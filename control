@@ -1,0 +1,24 @@
+Source: p2p-wallet
+Section: misc
+Priority: optional
+Maintainer: builder <builder@terminada.io>
+Rules-Requires-Root: no
+Build-Depends: debhelper-compat (= 13),
+Standards-Version: 4.6.2
+Homepage: https://github.com/fallen-icarus/p2p-wallet
+
+Package: p2p-wallet
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, cardano-cli
+Description: P2P-DeFi wallet for Cardano
+ The P2P-DeFi wallet is the first of its kind wallet that enables users to
+ build up arbitrarily complex transactions. It functions like an online
+ marketplace's shopping cart where uses add actions to their cart until they
+ are ready to "checkout". By enabling users to compose actions together into
+ a single transaction, users have access to significantly better economic
+ opportunities (e.g., composing a DEX with an options contract execution)
+ while saving 10x more money in the long run. It has builtin support for a
+ full DeFi stack: DEX, lending/borrowing, options trading, and aftermarket.
+ Furthermore, since it uses the p2p-DeFi protocols, it is the first
+ fully-decentralized and censorship-resistant DeFi experience. There is no
+ multisig or central point of failure that can be used to stop any part of it.
