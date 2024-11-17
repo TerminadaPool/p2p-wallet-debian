@@ -50,5 +50,5 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	mkdir -p debian/p2p-wallet/usr/bin
-	cp -p dist-newstyle/build/*/ghc-${ghc_version}/p2p-wallet-*/x/p2p-wallet/build/p2p-wallet/p2p-wallet debian/p2p-wallet/usr/bin/
+	cp -p dist-newstyle/build/*/ghc-${ghc_version}/p2p-wallet-*/x/p2p-wallet/opt/build/p2p-wallet/p2p-wallet debian/p2p-wallet/usr/bin/
 
