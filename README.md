@@ -77,7 +77,7 @@ rm -rf "${package}-${P2P_WALLET_VERSION}"; \
 # p2p-wallet source
 git clone "${p2p_wallet_repo}" "${package}-${P2P_WALLET_VERSION}"; \
 cd "${package}-${P2P_WALLET_VERSION}"; \
-git checkout dev; \
+git checkout main; \
 
 # deb packages build instructions
 git clone "${deb_build_instructions_repo}" debian; \
