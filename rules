@@ -17,7 +17,7 @@ override_dh_auto_configure:
 	ghcup install ghc ${ghc_version}
 	ghcup set ghc ${ghc_version}
 	ghcup install cabal ${cabal_version}
-	# Ignore output to stderr from ```cabal update```
+	# Ignore output to stderr from `cabal update`
 	-cabal update
 	echo "--------------------------------------------------"
 	echo "Haskell build environment:"
@@ -50,5 +50,6 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	mkdir -p debian/p2p-wallet/usr/bin
-	cp -p dist-newstyle/build/*/ghc-${ghc_version}/p2p-wallet-*/x/p2p-wallet/opt/build/p2p-wallet/p2p-wallet debian/p2p-wallet/usr/bin/
+	cp -p "$(shell cabal list-bin exe:p2p-wallet)" debian/p2p-wallet/usr/bin/
+	#cp -p dist-newstyle/build/*/ghc-${ghc_version}/p2p-wallet-*/x/p2p-wallet/opt/build/p2p-wallet/p2p-wallet debian/p2p-wallet/usr/bin/
 
